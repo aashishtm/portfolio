@@ -32,10 +32,10 @@ var darkTheme = ThemeData(
       fontWeight: FontWeight.w400,
     ),
     labelMedium: TextStyle(
-      fontSize: 16,
+      fontSize: 15,
       fontFamily: "Console",
       color: Colors.white,
-      fontWeight: FontWeight.w400,
+      fontWeight: FontWeight.w200,
     ),
   ),
 );

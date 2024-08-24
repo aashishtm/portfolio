@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/widgets/appbar/custom_appbar.dart';
 import 'package:portfolio/widgets/info/info_section.dart';
+import 'package:portfolio/widgets/skills/skills_section.dart';
 
 class DesktopHomePage extends StatelessWidget {
   const DesktopHomePage({super.key});
@@ -8,10 +9,7 @@ class DesktopHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Padding(
-        padding: EdgeInsets.symmetric(
-          vertical: 20,
-        ),
+      body: SingleChildScrollView(
         child: Column(
           children: [
             CustomAppbar(),
@@ -19,6 +17,10 @@ class DesktopHomePage extends StatelessWidget {
               height: 20,
             ),
             InfoSection(),
+            SizedBox(
+              height: 20,
+            ),
+            SkillsSection()
           ],
         ),
       ),
