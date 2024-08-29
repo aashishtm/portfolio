@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/widgets/appbar/custom_appbar.dart';
-import 'package:portfolio/widgets/info/info_section.dart';
-import 'package:portfolio/widgets/skills/skills_section.dart';
+import 'package:portfolio/widgets/desktop/appbar/custom_appbar.dart';
+import 'package:portfolio/widgets/desktop/info/info_section.dart';
+import 'package:portfolio/widgets/desktop/projects/projects.dart';
+import 'package:portfolio/widgets/desktop/skills/skills_section.dart';
 
 class DesktopHomePage extends StatelessWidget {
   const DesktopHomePage({super.key});
@@ -20,7 +21,11 @@ class DesktopHomePage extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            SkillsSection()
+            SkillsSection(),
+            SizedBox(
+              height: 20,
+            ),
+            DesktopProjectsSection(),
           ],
         ),
       ),
