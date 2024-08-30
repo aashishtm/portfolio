@@ -12,11 +12,11 @@ class MobileMySkillsSection extends StatelessWidget {
         padding: EdgeInsets.all(20),
         child: Column(
           children: [
-            const Text(
+            Text(
               "My Skills",
               style: TextStyle(),
             ),
-            const SizedBox(
+            SizedBox(
               height: 20,
             ),
             Row(

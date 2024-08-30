@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/widgets/footer.dart';
 import 'package:portfolio/widgets/mobile/appbar/custom_appbar_mobile.dart';
 import 'package:portfolio/widgets/mobile/info/info_section.dart';
 import 'package:portfolio/widgets/mobile/projects/projects.dart';
@@ -22,6 +23,10 @@ class MobileHomePage extends StatelessWidget {
             height: 20,
           ),
           MobileProjectSection(),
+          SizedBox(
+            height: 20,
+          ),
+          Footer(),
         ],
       ),
     );
