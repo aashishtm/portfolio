@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/widgets/desktop/appbar/custom_appbar.dart';
 import 'package:portfolio/widgets/desktop/info/info_section.dart';
-import 'package:portfolio/widgets/desktop/projects/projects.dart';
-import 'package:portfolio/widgets/desktop/skills/skills_section.dart';
+import 'package:portfolio/widgets/projects/projects.dart';
+import 'package:portfolio/widgets/skills/skills_section.dart';
 import 'package:portfolio/widgets/footer.dart';
 
 class DesktopHomePage extends StatelessWidget {
@@ -10,27 +10,35 @@ class DesktopHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
-            CustomAppbar(),
-            SizedBox(
+            const CustomAppbar(),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 100),
+              child: Divider(
+                height: 20,
+                thickness: 3,
+                color: Theme.of(context).colorScheme.primary,
+              ),
+            ),
+            const SizedBox(
               height: 20,
             ),
-            InfoSection(),
-            SizedBox(
+            const InfoSection(),
+            const SizedBox(
               height: 20,
             ),
-            SkillsSection(),
-            SizedBox(
+            const SkillsSection(),
+            const SizedBox(
               height: 20,
             ),
-            DesktopProjectsSection(),
-            SizedBox(
+            const ProjectsSection(),
+            const SizedBox(
               height: 20,
             ),
-            Footer(),
+            const Footer(),
           ],
         ),
       ),

@@ -7,28 +7,39 @@ class Footer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Theme.of(context).colorScheme.primaryContainer,
-      child: const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 100, vertical: 50),
+      // color: Theme.of(context).colorScheme.primaryContainer,
+      width: double.maxFinite,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 50),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
+            Divider(
+              height: 20,
+              thickness: 2,
+              indent: 20,
+              endIndent: 0,
+              color: Theme.of(context).colorScheme.primary,
+            ),
+            const SizedBox(
+              height: 50,
+            ),
+            const Text(
               "Aashish Thapa Magar",
               style: TextStyle(),
             ),
-            SizedBox(
-              height: 20,
+            const SizedBox(
+              height: 10,
             ),
-            Text("Hi, I am bla bla bla and bla bla bla. bla bla bla."),
-            SizedBox(
-              height: 20,
+            const Text("Hi, I am bla bla bla and bla bla bla. bla bla bla."),
+            const SizedBox(
+              height: 10,
             ),
-            SocialWidget(),
-            SizedBox(
+            const SocialWidget(),
+            const SizedBox(
               height: 50,
             ),
-            Text("Copyright 2024. AashishTM")
+            const Text("Copyright 2024. AashishTM")
           ],
         ),
       ),

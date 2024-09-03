@@ -6,28 +6,31 @@ class SocialWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+    return Wrap(
+      alignment: WrapAlignment.center,
+      spacing: 10,
       children: [
         IconButton(
           onPressed: () {},
-          icon: const FaIcon(FontAwesomeIcons.linkedin),
-          color: Theme.of(context).colorScheme.onPrimary,
+          icon: FaIcon(
+            FontAwesomeIcons.linkedin,
+            color: Theme.of(context).colorScheme.primary,
+          ),
         ),
         IconButton(
           onPressed: () {},
           icon: const FaIcon(FontAwesomeIcons.facebook),
-          color: Theme.of(context).colorScheme.onPrimary,
+          color: Theme.of(context).colorScheme.primary,
         ),
         IconButton(
           onPressed: () {},
           icon: const FaIcon(FontAwesomeIcons.instagram),
-          color: Theme.of(context).colorScheme.onPrimary,
+          color: Theme.of(context).colorScheme.primary,
         ),
         IconButton(
           onPressed: () {},
           icon: const FaIcon(FontAwesomeIcons.github),
-          color: Theme.of(context).colorScheme.onPrimary,
+          color: Theme.of(context).colorScheme.primary,
         )
       ],
     );

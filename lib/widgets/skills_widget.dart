@@ -12,37 +12,45 @@ class SkillsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              width: 100,
-              height: 100,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(100),
-                border: Border.all(
-                  width: 1,
-                  color: Theme.of(context).colorScheme.primary,
-                ),
+    return ConstrainedBox(
+      constraints: const BoxConstraints(minWidth: 150, maxWidth: 400),
+      child: Card(
+        elevation: 20,
+        child: Padding(
+          padding: const EdgeInsets.all(30.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Icon(
+                    icon,
+                    size: 50,
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                  Text(
+                    title,
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
+                ],
               ),
-              child: Icon(
-                icon,
-                size: 60,
+              Divider(
+                height: 20,
+                thickness: 1,
+                indent: 0,
+                endIndent: 0,
                 color: Theme.of(context).colorScheme.primary,
               ),
-            ),
-            Text(
-              title,
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
-            Text(
-              description,
-              style: Theme.of(context).textTheme.labelMedium,
-            ),
-          ],
+              const SizedBox(
+                height: 10,
+              ),
+              Text(
+                description,
+                style: Theme.of(context).textTheme.labelMedium,
+              ),
+            ],
+          ),
         ),
       ),
     );

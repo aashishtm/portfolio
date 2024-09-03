@@ -17,7 +17,7 @@ class MobileInfoSection extends StatelessWidget {
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
                 "Hi, I'm Aashish Thapa Magar",
@@ -33,7 +33,8 @@ class MobileInfoSection extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              Row(
+              Wrap(
+                alignment: WrapAlignment.center,
                 children: [
                   PrimaryButton(
                     btnName: "Get Connected.",
